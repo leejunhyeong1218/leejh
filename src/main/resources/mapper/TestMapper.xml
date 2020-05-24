@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jc.tri.mapper.TestMapper">
+	<select id="selectPlan" parameterType="map" resultType="com.jc.tri.model.BizPlan">
+		/* com.jc.tri.mapper.Test.selectPlan */
+		SELECT
+			PLAN_KEY as planKey
+			,PLAT_KEY as platKey
+			,PLAN_NM as planNm
+			,USE_YN as useYn
+			,DEFAULT_YN as defaultYn
+			,PRICE as price
+			,CONN_LIMIT as connLimit
+			,DATA_LIMIT as dataLimit
+			,CREATE_USER_YN as createUserYn
+			,CONTROL_YN as controlYn
+			,APP_YN as appYn
+			,DEV_DETAIL_YN as devDetailYn
+			,API_LINK_YN as apiLinkYn
+			,PUSH_YN as pushYn
+			,CUSTOM_PUSH_YN as customPushYn
+			,CUSTOM_LOGO_YN as customLogoYn
+			,MEMO as memo
+			,DATE_FORMAT(REG_DT, '%Y-%m-%d') as regDt
+			,DATE_FORMAT(UPD_DT, '%Y-%m-%d') as updDt
+		FROM
+			TB_BIZ_PLAN
+	</select>
+	
+</mapper>
